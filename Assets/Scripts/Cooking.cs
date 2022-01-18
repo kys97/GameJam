@@ -8,13 +8,13 @@ public class Cooking : MonoBehaviour
     public bool isPoison = false;
     public GameObject target;
     private SpriteRenderer renderer;
-    public Sprite[] sprites = new Sprite[18];
-    
+    public List<int> Cost;
+    //public Sprite[] sprites = new Sprite[18];
+
     Plating plating;
     GameManager gamemanager;
 
     [Header("- Money")]
-
 
     [Header("- Sound")]
     private AudioSource theAudio;
@@ -28,6 +28,7 @@ public class Cooking : MonoBehaviour
 
     void Start()
     {
+        gamemanager = GameObject.Find("GameManager").GetComponent<GameManager>();
         renderer = GetComponent<SpriteRenderer>();
         theAudio = GetComponent<AudioSource>();
     }
@@ -46,8 +47,7 @@ public class Cooking : MonoBehaviour
                 if (target.name == "B1")
                 {
                     state = 0;
-                    isPoison = false;
-                    renderer.enabled = true;
+                    SetBottle(state);
 
                     theAudio.clip = b1;
                     theAudio.Play();
@@ -55,8 +55,7 @@ public class Cooking : MonoBehaviour
                 else if (target.name == "B2")
                 {
                     state = 3;
-                    isPoison = false;
-                    renderer.enabled = true;
+                    SetBottle(state);
 
                     theAudio.clip = b2;
                     theAudio.Play();
@@ -64,8 +63,7 @@ public class Cooking : MonoBehaviour
                 else if (target.name == "B3")
                 {
                     state = 6;
-                    isPoison = false;
-                    renderer.enabled = true;
+                    SetBottle(state);
 
                     theAudio.clip = b3;
                     theAudio.Play();
@@ -76,6 +74,7 @@ public class Cooking : MonoBehaviour
                     if (target.name == "C1")
                     {
                         state += 1;
+                        gamemanager.SetMoney(- Cost[3]);
 
                         theAudio.clip = milk;
                         theAudio.Play();
@@ -83,6 +82,7 @@ public class Cooking : MonoBehaviour
                     else if (target.name == "C2")
                     {
                         state += 2;
+                        gamemanager.SetMoney(- Cost[4]);
 
                         theAudio.clip = whiskey;
                         theAudio.Play();
@@ -93,6 +93,7 @@ public class Cooking : MonoBehaviour
                 {
                     isPoison = true;
                     state += 9;
+                    gamemanager.SetMoney(- Cost[5]);
 
                     theAudio.clip = poison;
                     theAudio.Play();
@@ -124,13 +125,20 @@ public class Cooking : MonoBehaviour
 
         if (state != -1)
         {
-            renderer.sprite = sprites[state];
+            renderer.sprite = gamemanager.Bottles[state];
         }
 
         if (target == null)
         {
             state = -1;
         }
+    }
+
+    private void SetBottle(int bottle)
+    {
+        isPoison = false;
+        renderer.enabled = true;
+        gamemanager.SetMoney(- Cost[bottle / 3]);
     }
 
     private void Serving()
