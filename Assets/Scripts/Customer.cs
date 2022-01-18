@@ -69,13 +69,18 @@ public class Customer : MonoBehaviour
             GameManager.Instance.Seat[Index] = -1;
             GameManager.Instance.SetMoney(5000);
             MyTimer.gameObject.SetActive(false);
-            Destroy(this);
+            StartCoroutine(MenuClear());
         }
         else if (GameManager.Instance.Menu[Index] != -1)//주문 잘못 받았을 때
         {
             GameManager.Instance.Seat[Index] = -1;
             MyTimer.gameObject.SetActive(false);
-            Destroy(this);
+            StartCoroutine(MenuClear());
         }
+    }
+    public IEnumerator MenuClear()
+    {
+        yield return new WaitForSeconds(1.0f);
+        Destroy(gameObject);
     }
 }
