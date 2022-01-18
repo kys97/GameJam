@@ -22,6 +22,7 @@ public class Killer : MonoBehaviour
             {
                 GameManager.Instance.RandomKiller(i);
                 Killers[i].GetComponent<SpriteRenderer>().sprite = GameManager.Instance.People[GameManager.Instance.Assassin[i]];
+                Debug.Log("인덱스 : "+i+" / 새로운 킬러 : " + GameManager.Instance.Assassin[i]);
             }
         }
     }

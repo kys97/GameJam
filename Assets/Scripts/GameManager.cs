@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
         while(check)
         {
             check = false;
-            Assassin[i] = Random.Range(0, 24);
+            Assassin[i] = Random.Range(0, 25);
 
             for (int j = 0; j < Assassin.Length; j++)
             {

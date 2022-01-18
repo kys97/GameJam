@@ -24,12 +24,13 @@ public class Plating : MonoBehaviour
             GameManager.Instance.Menu[Index] = food;
             renderer.sprite = sprites[food];
             StartCoroutine(MenuClear());
+            food = -1;
         }
     }
 
     public IEnumerator MenuClear()
     {
         yield return new WaitForSeconds(1.0f);
-        Destroy(gameObject);
+        renderer.sprite = null;
     }
 }
