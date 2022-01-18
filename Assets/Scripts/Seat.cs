@@ -16,7 +16,7 @@ public class Seat : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Instance.GetGameStatus() != 1)
+        if (GameManager.Instance.GetGameStatus() > 1)
             StopCoroutine(SetCustomer());
     }
 

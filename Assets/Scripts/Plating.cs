@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Plating : MonoBehaviour
 {
+    [SerializeField] private int Index;
     private SpriteRenderer renderer;
     public int food = -1;
     public bool isPoison = false;
@@ -20,6 +21,7 @@ public class Plating : MonoBehaviour
     {
         if (food != -1)
         {
+            GameManager.Instance.Menu[Index] = food;
             renderer.sprite = sprites[food];
         }
     }
