@@ -99,6 +99,11 @@ public class Cooking : MonoBehaviour
                 Serving();
             }
         }
+
+        if (target == null)
+        {
+            state = -1;
+        }
     }
 
     private void Serving()
@@ -106,7 +111,7 @@ public class Cooking : MonoBehaviour
         plating.food = state;
         plating.isPoison = isPoison;
 
-        state = -1;
         renderer.enabled = false;
+        target = null;
     }
 }
