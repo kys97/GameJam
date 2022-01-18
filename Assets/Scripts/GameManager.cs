@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 
     public int Play_minute;
     public float play_time;
+    public int Customer_Second;
+    public float customer_time;
 
     private void Awake()
     {
@@ -68,27 +70,36 @@ public class GameManager : MonoBehaviour
         GameStatus = 1;
         Money = 0;
 
-        for(int i=0; i < Assassin.Length; i++)
+        for (int i = 0; i < Assassin.Length; i++)
+            RandomKiller(i);
+
+            SceneManager.LoadScene("Game");
+    }
+    public void RandomKiller(int i)
+    {
+        bool check = true;
+        while(check)
         {
+            check = false;
             Assassin[i] = Random.Range(0, 24);
 
-            for(int j=0; j < i; j++)
+            for (int j = 0; j < Assassin.Length; j++)
             {
-                if(Assassin[j] == Assassin[i])
+                if (j != i && Assassin[j] == Assassin[i])
                 {
-                    i--;
+                    check = true;
+                    Assassin[i] = -1;
                     break;
                 }
             }
-
         }
-
-        SceneManager.LoadScene("Game");
     }
-    public void GameClear() { GameStatus = 2; }
-    public void GameTimeOver() { GameStatus = 3; }
-    public void GameDie() { GameStatus = 4; }
+
+    public void GameClear() { GameStatus = 2; GameEnding();  }
+    public void GameTimeOver() { GameStatus = 3; GameEnding(); }
+    public void GameDie() { GameStatus = 4; GameEnding(); }
     public int GetGameStatus() { return GameStatus; }
+    public void GameEnding() { SceneManager.LoadScene("End"); }
 
     public void SetMoney(int m) { Money += m; }
     public int GetMoney() { return Money; }

@@ -25,8 +25,6 @@ public class GameTimer : MonoBehaviour
         Timer.value = GameManager.Instance.play_time / MaxTime;
         if (GameManager.Instance.play_time > 0.0f) GameManager.Instance.play_time -= Time.deltaTime;
         else GameManager.Instance.play_time = 0;
-
-        Debug.Log("게임 타이머 : " + GameManager.Instance.play_time);
         
         if(Timer.value <= 0)
         {

@@ -16,6 +16,13 @@ public class Killer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        for (int i = 0; i < 4; i++)
+        {
+            if (GameManager.Instance.Assassin[i] == -1)
+            {
+                GameManager.Instance.RandomKiller(i);
+                Killers[i].GetComponent<SpriteRenderer>().sprite = GameManager.Instance.People[GameManager.Instance.Assassin[i]];
+            }
+        }
     }
 }

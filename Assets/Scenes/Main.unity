@@ -195,7 +195,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: cbf68f939e5eb8d40b6f748812a4d058, type: 3}
   - {fileID: 21300000, guid: 4c27b1faf068bdc4486a13aa78b5922e, type: 3}
   - {fileID: 21300000, guid: c655c1038af98f8409d888139524bc88, type: 3}
-  Assassin: 000000000000000000000000
+  Assassin: ffffffffffffffffffffffffffffffffffffffff
   Bottles:
   - {fileID: 21300000, guid: 41816ea49598d97438f2fc9a7723b9ac, type: 3}
   - {fileID: 21300000, guid: 0cb8784a95e5e11409089edfc1fe56ec, type: 3}
@@ -222,6 +222,8 @@ MonoBehaviour:
   poisonNumber: 0a0000000b0000000d0000000e0000001000000011000000
   Play_minute: 3
   play_time: 0
+  Customer_Second: 20
+  customer_time: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
