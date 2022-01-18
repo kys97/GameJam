@@ -10,8 +10,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int Money;
     public int TargetAmount = 250000;
     public int PlayTime;
-    public GameObject[] People = new GameObject[25];
-    [SerializeField] private int[] Assassin = new int[3];
+    public List<Sprite> People;
+    public List<Sprite> Bottle;
+    [SerializeField] private int[] Assassin = new int[5];
+    public bool CustomerFull = false;//¼Õ´Ô ´Ù Ã¡´ÂÁö
+    public int[] Seat;//ÁÂ¼®
+    public int[] Menu;//¸Þ´º
+    public int[] menuNumber = { 1, 2, 4, 5, 7, 8 };
+    public int[] poisonNumber = { 10, 11, 13, 14, 16, 17 };
 
     private void Awake()
     {
@@ -22,6 +28,19 @@ public class GameManager : MonoBehaviour
         }
         _instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void Update()
+    {
+        int cnt = 0;
+        for (int i = 0; i < Seat.Length; i++)
+            if (Seat[i] >= 0)
+                cnt++;
+
+        if (cnt == 4)
+            CustomerFull = true;
+        else
+            CustomerFull = false;
     }
 
     private static GameManager _instance;
@@ -66,7 +85,17 @@ public class GameManager : MonoBehaviour
     public void GameClear() { GameStatus = 2; }
     public void GameTimeOver() { GameStatus = 3; }
     public void GameDie() { GameStatus = 4; }
+    public int GetGameStatus() { return GameStatus; }
 
-    public void SetMoney(int m) { Money = m; }
+    public void SetMoney(int m) { Money += m; }
     public int GetMoney() { return Money; }
+
+    public int UniqueRandomNumber(int min, int max)
+    {
+        int rand = Random.Range(min, max);
+
+
+
+        return rand;
+    }
 }
