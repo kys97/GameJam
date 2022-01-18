@@ -9,23 +9,24 @@ public class GameTimer : MonoBehaviour
     Slider Timer;
     public int GameTime;
     float MaxTime;
-    float SliderTime;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameTime = GameManager.Instance.PlayTime;
+        GameTime = GameManager.Instance.Play_minute;
         Timer = GetComponent<Slider>();
         MaxTime = GameTime * 60;
-        SliderTime = MaxTime;
+        GameManager.Instance.play_time = MaxTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Timer.value = SliderTime / MaxTime;
-        if (SliderTime > 0.0f) SliderTime -= Time.deltaTime;
-        else SliderTime = 0;
+        Timer.value = GameManager.Instance.play_time / MaxTime;
+        if (GameManager.Instance.play_time > 0.0f) GameManager.Instance.play_time -= Time.deltaTime;
+        else GameManager.Instance.play_time = 0;
+
+        Debug.Log("게임 타이머 : " + GameManager.Instance.play_time);
         
         if(Timer.value <= 0)
         {
