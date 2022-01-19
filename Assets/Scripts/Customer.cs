@@ -16,6 +16,12 @@ public class Customer : MonoBehaviour
     private bool init = false;
     bool TimerStop = false;
 
+    [Header("- Sound")]
+    private AudioSource theAudio;
+    public AudioClip SuccessClip;
+    public AudioClip FailClip;
+    public AudioClip BombClip;
+
     private int Maxtime = GameManager.Instance.Customer_Second;
     private float time;
 
@@ -25,8 +31,9 @@ public class Customer : MonoBehaviour
         int index = Random.Range(0, 5);
         MyMenu = GameManager.Instance.menuNumber[index];
         menu_img.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.Bottles[MyMenu];
+        theAudio = GetComponent<AudioSource>();
 
-        for(int i=0; i < 3; i++)
+        for (int i=0; i < 3; i++)
         {
             if (GameManager.Instance.Assassin[i] == Number)
             {
@@ -91,6 +98,10 @@ public class Customer : MonoBehaviour
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;
                 Debug.Log(Number + "주문 잘 받은 이후");
+
+                theAudio.clip = SuccessClip;
+                theAudio.Play();
+
                 TimerStop = true;
                 MyTimer.gameObject.SetActive(false);
                 StartCoroutine(MenuClear());
@@ -98,7 +109,17 @@ public class Customer : MonoBehaviour
             else if (GameManager.Instance.Menu[Index] != -1)//주문 잘못 받았을 때
             {
                 Debug.Log(Number + "주문 잘못받음");
-                if (isKiller) { GameManager.Instance.GameDie(); Debug.Log(Number + " 킬러 잘못받음"); }
+                if (isKiller) 
+                { 
+                    GameManager.Instance.GameDie(); Debug.Log(Number + " 킬러 잘못받음");
+                    theAudio.clip = BombClip;
+                    theAudio.Play();
+                }
+                else
+                {
+                    theAudio.clip = FailClip;
+                    theAudio.Play();
+                }
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;
                 TimerStop = true;

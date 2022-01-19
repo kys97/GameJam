@@ -7,11 +7,15 @@ public class Seat : MonoBehaviour
 {
     [SerializeField] private int SeatNumber;
     public GameObject CustomerPrefab;
-    [SerializeField] private Slider Timer; 
+    [SerializeField] private Slider Timer;
+    private AudioSource theAudio;
+    //[SerializeField] protected AudioClip SitClip;
 
     void Start()
     {
         StartCoroutine(SetCustomer());
+        theAudio = GetComponent<AudioSource>();
+        //theAudio.clip = SitClip;
     }
 
     private void Update()
@@ -33,6 +37,7 @@ public class Seat : MonoBehaviour
                 Timer.gameObject.SetActive(true);
                 copy.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.People[GameManager.Instance.Seat[SeatNumber]];
                 copy.GetComponent<Customer>().setInit(GameManager.Instance.Seat[SeatNumber], Timer, SeatNumber);
+                theAudio.Play();
             }
         }
         yield return StartCoroutine(SetCustomer());
