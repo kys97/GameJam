@@ -66,7 +66,7 @@ public class Customer : MonoBehaviour
 
             if (MyTimer.value <= 0.0f)//주문 못 받고 타이머 종료
             {
-                if (isKiller) GameManager.Instance.GameDie();
+                if (isKiller) { Debug.Log(Number + "  " + isKiller); GameManager.Instance.GameDie(); }
                 GameManager.Instance.play_time -= 3.0f;
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;

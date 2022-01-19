@@ -11,6 +11,11 @@ public class Button : MonoBehaviour
     public GameObject LevelPannel;
     [SerializeField] private int TutorialPage = 0;
 
+    public void LoadMain()
+    {
+        SceneManager.LoadScene("Main");
+    }
+
     public void Level()
     {
         LevelPannel.SetActive(true);
