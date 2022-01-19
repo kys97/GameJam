@@ -245,31 +245,31 @@ MonoBehaviour:
   Money: 0
   TargetAmount: 250000
   People:
-  - {fileID: 21300000, guid: 0850e30bf3084fb4aaf778a52c285a52, type: 3}
-  - {fileID: 21300000, guid: 70e8e45d88e42f248a63fc92916ee9d4, type: 3}
-  - {fileID: 21300000, guid: 40bbb4deca166d54b9de9d9a296eb41d, type: 3}
-  - {fileID: 21300000, guid: 7e0b79fb3f96840458219d5a112ade3c, type: 3}
-  - {fileID: 21300000, guid: 1dcf132bc83c1974b8f6c8cffb173013, type: 3}
-  - {fileID: 21300000, guid: 159930da119c72f4fb8618da8d007335, type: 3}
-  - {fileID: 21300000, guid: 38e9ab5e0fa81b544964628d9c519ea8, type: 3}
-  - {fileID: 21300000, guid: 71812967d2cf2d147a52d410559dd991, type: 3}
-  - {fileID: 21300000, guid: ea2f8bbf33315cd44ab3423e7dd5b2ef, type: 3}
-  - {fileID: 21300000, guid: a93880c752aca2146a7dafbcdf212492, type: 3}
-  - {fileID: 21300000, guid: 5e456c7d571bd0e4ea1e0853551f1850, type: 3}
-  - {fileID: 21300000, guid: a531bb6d6c093894dadfb2ce21840b55, type: 3}
-  - {fileID: 21300000, guid: 3f99c5ac10643bf43b70d0bcee5c8250, type: 3}
-  - {fileID: 21300000, guid: 795d41c31fd433c44b2081a4d3fdd8e6, type: 3}
-  - {fileID: 21300000, guid: adc981797b4cae2408f080b647645cba, type: 3}
-  - {fileID: 21300000, guid: 46612747b25ba114a817d1f88098ea2c, type: 3}
-  - {fileID: 21300000, guid: 61f7eec7b5fe3164893cf6546613a9d3, type: 3}
-  - {fileID: 21300000, guid: f0b740140e02fc444b73b100b37b86ea, type: 3}
-  - {fileID: 21300000, guid: 553b5a8fab723f74db0925568f6a4693, type: 3}
-  - {fileID: 21300000, guid: 516afc6082b5ff649bc451b7c5559192, type: 3}
-  - {fileID: 21300000, guid: 8fb16ef38bc5323448d8531d9466b6dc, type: 3}
-  - {fileID: 21300000, guid: 6008ec4a5f4b05e439d959a492be8b98, type: 3}
-  - {fileID: 21300000, guid: cbf68f939e5eb8d40b6f748812a4d058, type: 3}
-  - {fileID: 21300000, guid: 4c27b1faf068bdc4486a13aa78b5922e, type: 3}
-  - {fileID: 21300000, guid: c655c1038af98f8409d888139524bc88, type: 3}
+  - {fileID: 21300000, guid: d7d91806ef959fe4f90d72ba5463c67f, type: 3}
+  - {fileID: 21300000, guid: 21f2d4e87ca6d2c43b8b6b7a0c8a3339, type: 3}
+  - {fileID: 21300000, guid: cc02a3120d5b3a24eaca4784964a81b0, type: 3}
+  - {fileID: 21300000, guid: 89e4184f1b72dc448b1e2a3ac5e9bd00, type: 3}
+  - {fileID: 21300000, guid: 913018ed24a70e343a9f02876741b3d4, type: 3}
+  - {fileID: 21300000, guid: 49bd23f45baee6344885b1b414deb76a, type: 3}
+  - {fileID: 21300000, guid: 38cf61ac536e2194e846201b4bacfc52, type: 3}
+  - {fileID: 21300000, guid: efebee8db33b54d4f87e8fcbb4941348, type: 3}
+  - {fileID: 21300000, guid: 17903b75fb092a848862c4bc71801e52, type: 3}
+  - {fileID: 21300000, guid: b9c060d7ed78bb846af53b154d9ea4ff, type: 3}
+  - {fileID: 21300000, guid: d3a4579e7b44abc478739ea5c541fcfb, type: 3}
+  - {fileID: 21300000, guid: 5ebe90bbf5da2c84b9e46ef92bba2ea3, type: 3}
+  - {fileID: 21300000, guid: 75f81907a4cd4b84b8f8dae6045d1467, type: 3}
+  - {fileID: 21300000, guid: fa1bcc189dcf52c4395fcffcf95b0976, type: 3}
+  - {fileID: 21300000, guid: 057f50ab48b8a5c4f9a613b9a71177ab, type: 3}
+  - {fileID: 21300000, guid: 0af1758d21504a243b864f7bbbb1feba, type: 3}
+  - {fileID: 21300000, guid: f6dc8636d3dd01d46984ce665e1709f5, type: 3}
+  - {fileID: 21300000, guid: a12983b11b7203545b22523928f8aaa4, type: 3}
+  - {fileID: 21300000, guid: 3e16cd78ea9174b40bff5b508aa086e9, type: 3}
+  - {fileID: 21300000, guid: 6d026b04e0bc99645814de7ccc538236, type: 3}
+  - {fileID: 21300000, guid: f4bf77d92fb41dc46a02637f448452c5, type: 3}
+  - {fileID: 21300000, guid: 436ede5410be6d84d80b593d2049fffa, type: 3}
+  - {fileID: 21300000, guid: f2866290f2ca7b14783ef3e4f65753c5, type: 3}
+  - {fileID: 21300000, guid: 8fa912e70fa0f7946a61753d5d5628ae, type: 3}
+  - {fileID: 21300000, guid: f8603ea4b4abb7a438c173963eed2870, type: 3}
   Assassin: ffffffffffffffffffffffffffffffffffffffff
   Bottles:
   - {fileID: 21300000, guid: 1ad431d3f0de140469af549897dc2a08, type: 3}
@@ -290,6 +290,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a874a7c1ed313454192d1281be56544e, type: 3}
   - {fileID: 21300000, guid: bcd1f96d63e272a4e9a9e05f455159a3, type: 3}
   - {fileID: 21300000, guid: b9a59fe03704e7249af000e99788267b, type: 3}
+  Ending:
+  - {fileID: 21300000, guid: f24050349cb74894f891f087923f944e, type: 3}
+  - {fileID: 21300000, guid: e8e86a33af1c07247b56c388aa99c0a0, type: 3}
+  - {fileID: 21300000, guid: 98c987dcbd59fde4ead27851a85917b8, type: 3}
   CustomerFull: 0
   Seat: ffffffffffffffffffffffffffffffff
   Menu: ffffffffffffffffffffffffffffffff

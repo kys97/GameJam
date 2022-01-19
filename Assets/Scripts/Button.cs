@@ -46,22 +46,22 @@ public class Button : MonoBehaviour
     public void Level1()
     {
         GameManager.Instance.Customer_Second = 20;
-        SceneManager.LoadScene("Game");
+        GameManager.Instance.GameStart();
     }
     public void Level2()
     {
         GameManager.Instance.Customer_Second = 10;
-        SceneManager.LoadScene("Game");
+        GameManager.Instance.GameStart();
     }
     public void Level3()
     {
         GameManager.Instance.Customer_Second = 5;
-        SceneManager.LoadScene("Game");
+        GameManager.Instance.GameStart();
     }
     public void Level4()
     {
         GameManager.Instance.Play_minute = 1;
         GameManager.Instance.Customer_Second = 5;
-        SceneManager.LoadScene("Game");
+        GameManager.Instance.GameStart();
     }
 }
