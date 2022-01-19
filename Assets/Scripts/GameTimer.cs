@@ -28,7 +28,7 @@ public class GameTimer : MonoBehaviour
         
         if(Timer.value <= 0)
         {
-            if(GameManager.Instance.GetMoney() <= GameManager.Instance.TargetAmount)
+            if(GameManager.Instance.GetMoney() >= GameManager.Instance.TargetAmount)
             {
                 GameManager.Instance.GameClear();
                 SceneManager.LoadScene("End");
