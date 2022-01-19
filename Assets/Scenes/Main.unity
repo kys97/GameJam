@@ -170,31 +170,31 @@ MonoBehaviour:
   Money: 0
   TargetAmount: 250000
   People:
-  - {fileID: 21300000, guid: 0850e30bf3084fb4aaf778a52c285a52, type: 3}
-  - {fileID: 21300000, guid: 70e8e45d88e42f248a63fc92916ee9d4, type: 3}
-  - {fileID: 21300000, guid: 40bbb4deca166d54b9de9d9a296eb41d, type: 3}
-  - {fileID: 21300000, guid: 7e0b79fb3f96840458219d5a112ade3c, type: 3}
-  - {fileID: 21300000, guid: 1dcf132bc83c1974b8f6c8cffb173013, type: 3}
-  - {fileID: 21300000, guid: 159930da119c72f4fb8618da8d007335, type: 3}
-  - {fileID: 21300000, guid: 38e9ab5e0fa81b544964628d9c519ea8, type: 3}
-  - {fileID: 21300000, guid: 71812967d2cf2d147a52d410559dd991, type: 3}
-  - {fileID: 21300000, guid: ea2f8bbf33315cd44ab3423e7dd5b2ef, type: 3}
-  - {fileID: 21300000, guid: a93880c752aca2146a7dafbcdf212492, type: 3}
-  - {fileID: 21300000, guid: 5e456c7d571bd0e4ea1e0853551f1850, type: 3}
-  - {fileID: 21300000, guid: a531bb6d6c093894dadfb2ce21840b55, type: 3}
-  - {fileID: 21300000, guid: 3f99c5ac10643bf43b70d0bcee5c8250, type: 3}
-  - {fileID: 21300000, guid: 795d41c31fd433c44b2081a4d3fdd8e6, type: 3}
-  - {fileID: 21300000, guid: adc981797b4cae2408f080b647645cba, type: 3}
-  - {fileID: 21300000, guid: 46612747b25ba114a817d1f88098ea2c, type: 3}
-  - {fileID: 21300000, guid: 61f7eec7b5fe3164893cf6546613a9d3, type: 3}
-  - {fileID: 21300000, guid: f0b740140e02fc444b73b100b37b86ea, type: 3}
-  - {fileID: 21300000, guid: 553b5a8fab723f74db0925568f6a4693, type: 3}
-  - {fileID: 21300000, guid: 516afc6082b5ff649bc451b7c5559192, type: 3}
-  - {fileID: 21300000, guid: 8fb16ef38bc5323448d8531d9466b6dc, type: 3}
-  - {fileID: 21300000, guid: 6008ec4a5f4b05e439d959a492be8b98, type: 3}
-  - {fileID: 21300000, guid: cbf68f939e5eb8d40b6f748812a4d058, type: 3}
-  - {fileID: 21300000, guid: 4c27b1faf068bdc4486a13aa78b5922e, type: 3}
-  - {fileID: 21300000, guid: c655c1038af98f8409d888139524bc88, type: 3}
+  - {fileID: 21300000, guid: 270f01a437d823d4eb323c1b3df52c31, type: 3}
+  - {fileID: 21300000, guid: 142649cf33c904f498bbd2d067c8b56d, type: 3}
+  - {fileID: 21300000, guid: beb29c211a64d2b43b500933e0d57640, type: 3}
+  - {fileID: 21300000, guid: c067f46e6b0d14347a3ec28345dd4cbf, type: 3}
+  - {fileID: 21300000, guid: cdbc716c01cc770498043f87343c44a0, type: 3}
+  - {fileID: 21300000, guid: 79fd266dc2820cf4ba9919e562e4d04e, type: 3}
+  - {fileID: 21300000, guid: 1e2b76c54133a2a429ef90dd58628257, type: 3}
+  - {fileID: 21300000, guid: 959bde8b5bf8e20478f3b0e2b1f1f091, type: 3}
+  - {fileID: 21300000, guid: 49e37fd74efb00e4da88f7af69521b6e, type: 3}
+  - {fileID: 21300000, guid: 98cdec76ffa79c147a46457fd0099686, type: 3}
+  - {fileID: 21300000, guid: dc7f7e71172ba974bae081f3f28b1d86, type: 3}
+  - {fileID: 21300000, guid: 7d4eb2080b429984794f339326df95d7, type: 3}
+  - {fileID: 21300000, guid: ca194fdfc1e2c17468bd7de27c9e7e90, type: 3}
+  - {fileID: 21300000, guid: 48dd08dcf17e8c14ab74e70a9fc4b0da, type: 3}
+  - {fileID: 21300000, guid: 70b2affa2bd5b1a40a1f2ff0bc51fbeb, type: 3}
+  - {fileID: 21300000, guid: 7a5fb112f5de57d4fa6860fa5ae76cba, type: 3}
+  - {fileID: 21300000, guid: 2d9a254cd8629564db4a749cb4853d9a, type: 3}
+  - {fileID: 21300000, guid: 54f1e671129a6ad4c84ea8de46727265, type: 3}
+  - {fileID: 21300000, guid: 1566fe4885041b643a574ea3ec91b001, type: 3}
+  - {fileID: 21300000, guid: d7a71f4c853f1324b95d8d3470ad8b47, type: 3}
+  - {fileID: 21300000, guid: e0bc9b32bfa243f4caf0aec6a0e0afc7, type: 3}
+  - {fileID: 21300000, guid: ebffe3b5850fe8046aedf0a9c5737453, type: 3}
+  - {fileID: 21300000, guid: 66fb9464a43a31a448033f61290bf734, type: 3}
+  - {fileID: 21300000, guid: b47cd1db245b86447a1b5ffc112bf150, type: 3}
+  - {fileID: 21300000, guid: 1dda5f380d798b14da9609a477d00b83, type: 3}
   Assassin: ffffffffffffffffffffffffffffffffffffffff
   Bottles:
   - {fileID: 21300000, guid: 1ad431d3f0de140469af549897dc2a08, type: 3}
