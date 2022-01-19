@@ -28,7 +28,7 @@ public class Seat : MonoBehaviour
     {
         if (GameManager.Instance.GetGameStatus() == 1) {
 
-            yield return new WaitForSeconds(Random.Range(0.0f, 20.0f));
+            yield return new WaitForSeconds(Random.Range(0.0f, 15.0f));
 
             if (!GameManager.Instance.CustomerFull && GameManager.Instance.Seat[SeatNumber] == -1)
             {

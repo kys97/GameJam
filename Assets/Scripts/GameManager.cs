@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> People;
     public int[] Assassin = new int[5];
     public List<Sprite> Bottles;
+    public List<Sprite> Ending;
 
     public bool CustomerFull = false;//¼Õ´Ô ´Ù Ã¡´ÂÁö
     public List<int> Seat;//ÁÂ¼®
