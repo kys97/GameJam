@@ -256,7 +256,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -315,7 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f8e73418cd0cc4d9eddfed0e153b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPause: {fileID: 950584662}
 --- !u!1 &144705890
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ef63a17cc422c4092b3e5e89fb7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 0
   food: -1
   isPoison: 0
   sprites:
@@ -641,25 +641,7 @@ MonoBehaviour:
   state: -1
   isPoison: 0
   target: {fileID: 0}
-  sprites:
-  - {fileID: 21300000, guid: 41816ea49598d97438f2fc9a7723b9ac, type: 3}
-  - {fileID: 21300000, guid: 0cb8784a95e5e11409089edfc1fe56ec, type: 3}
-  - {fileID: 21300000, guid: f300ecb0caf130745aea58640ba19620, type: 3}
-  - {fileID: 21300000, guid: 59b4b4f3c820dfa46a70adcbef9118eb, type: 3}
-  - {fileID: 21300000, guid: 51b4d17724fe3eb4c8b8d400acedbd9a, type: 3}
-  - {fileID: 21300000, guid: 880c29a8e4e2a6344a06bb76dc47b406, type: 3}
-  - {fileID: 21300000, guid: d6a24c2c4048f944983a9e0706550e2d, type: 3}
-  - {fileID: 21300000, guid: 6e4903a38a33cf343abfb8697ea0bf2c, type: 3}
-  - {fileID: 21300000, guid: 46419954936475441a6cd63fb28a11fe, type: 3}
-  - {fileID: 21300000, guid: 4cc1df33ace0c7e4293ac63ac35ee093, type: 3}
-  - {fileID: 21300000, guid: 35e73c48c87ec3a48bce6243662d7923, type: 3}
-  - {fileID: 21300000, guid: 7dabcf4beccac244386247e90784c318, type: 3}
-  - {fileID: 21300000, guid: e930f17391e5bfb44a6971059280ea5b, type: 3}
-  - {fileID: 21300000, guid: fa6c6b53a7bbc624685bc82f35ba6cc7, type: 3}
-  - {fileID: 21300000, guid: 7c7f249c0b9e76e489de8ff0014822ab, type: 3}
-  - {fileID: 21300000, guid: 1d098b91d0248cd469493560ca1d4d21, type: 3}
-  - {fileID: 21300000, guid: 494a8660f2a471542ab76577f887d401, type: 3}
-  - {fileID: 21300000, guid: b9a59fe03704e7249af000e99788267b, type: 3}
+  Cost: 
   b1: {fileID: 8300000, guid: de1c43401737ffc43b9e093de88f48a7, type: 3}
   b2: {fileID: 8300000, guid: 0451e58da23619e40b13cc9684457986, type: 3}
   b3: {fileID: 8300000, guid: 46d8046619e174f4e944574e82e7e26f, type: 3}
@@ -760,7 +742,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &437987370
@@ -891,6 +873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ef63a17cc422c4092b3e5e89fb7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 0
   food: -1
   isPoison: 0
   sprites:
@@ -1176,6 +1159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ef63a17cc422c4092b3e5e89fb7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 0
   food: -1
   isPoison: 0
   sprites:
@@ -1431,8 +1415,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a41cee9aed17d1488b6fca29fd155a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentSprite: {fileID: 21300000, guid: ef3bd6e74e8c1464f97ab118b4894be0, type: 3}
-  NextSprite: {fileID: 21300000, guid: 53e5d67425fa8064ebccf71e71eeb311, type: 3}
 --- !u!1 &1031673182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1494,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1038647725
@@ -1649,7 +1631,7 @@ Transform:
   m_GameObject: {fileID: 1085623935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7255646, y: -0.2846648, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.7, z: 1}
   m_Children:
   - {fileID: 1771938778}
   - {fileID: 144705891}
@@ -1819,7 +1801,7 @@ SpriteRenderer:
   m_Size: {x: 15.624999, y: 11.71875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1608503284
@@ -2161,6 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96ef63a17cc422c4092b3e5e89fb7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 0
   food: -1
   isPoison: 0
   sprites:
@@ -2529,7 +2512,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1912559354
@@ -2903,7 +2886,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2028508267

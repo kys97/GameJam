@@ -16,24 +16,17 @@ public class Customer : MonoBehaviour
     private bool init = false;
     bool TimerStop = false;
 
-    [Header("- Sound")]
-    private AudioSource theAudio;
-    public AudioClip SuccessClip;
-    public AudioClip FailClip;
-    public AudioClip BombClip;
-
     private int Maxtime = GameManager.Instance.Customer_Second;
     private float time;
 
     // Start is called before the first frame update
     void Start()
     {
-        int index = Random.Range(0, 5);
+        int index = Random.Range(0, 6);
         MyMenu = GameManager.Instance.menuNumber[index];
         menu_img.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.Bottles[MyMenu];
-        theAudio = GetComponent<AudioSource>();
 
-        for (int i=0; i < 3; i++)
+        for(int i=0; i < 5; i++)
         {
             if (GameManager.Instance.Assassin[i] == Number)
             {
@@ -73,7 +66,7 @@ public class Customer : MonoBehaviour
 
             if (MyTimer.value <= 0.0f)//주문 못 받고 타이머 종료
             {
-                if (isKiller) GameManager.Instance.GameDie();
+                if (isKiller) { Debug.Log(Number + "  " + isKiller); GameManager.Instance.GameDie(); }
                 GameManager.Instance.play_time -= 3.0f;
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;
@@ -87,21 +80,17 @@ public class Customer : MonoBehaviour
                 if (isKiller)
                 {
                     Debug.Log(Number + "킬러 죽임");
-                    GameManager.Instance.SetMoney(15000);//킬러 죽이면 돈 더줌
+                    GameManager.Instance.SetMoney(20000);//킬러 죽이면 돈 더줌
                     GameManager.Instance.Assassin[killerNum] = -1;
                 }
                 else
                 {
                     Debug.Log(Number + "주문 잘 받음");
-                    GameManager.Instance.SetMoney(5000);
+                    GameManager.Instance.SetMoney(7000);
                 }
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;
                 Debug.Log(Number + "주문 잘 받은 이후");
-
-                theAudio.clip = SuccessClip;
-                theAudio.Play();
-
                 TimerStop = true;
                 MyTimer.gameObject.SetActive(false);
                 StartCoroutine(MenuClear());
@@ -109,17 +98,7 @@ public class Customer : MonoBehaviour
             else if (GameManager.Instance.Menu[Index] != -1)//주문 잘못 받았을 때
             {
                 Debug.Log(Number + "주문 잘못받음");
-                if (isKiller) 
-                { 
-                    GameManager.Instance.GameDie(); Debug.Log(Number + " 킬러 잘못받음");
-                    theAudio.clip = BombClip;
-                    theAudio.Play();
-                }
-                else
-                {
-                    theAudio.clip = FailClip;
-                    theAudio.Play();
-                }
+                if (isKiller) { GameManager.Instance.GameDie(); Debug.Log(Number + " 킬러 잘못받음"); }
                 GameManager.Instance.Seat[Index] = -1;
                 GameManager.Instance.Menu[Index] = -1;
                 TimerStop = true;

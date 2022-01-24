@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameTimer : MonoBehaviour
 {
     Slider Timer;
-    public int GameTime;
+    public float GameTime;
     float MaxTime;
 
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class GameTimer : MonoBehaviour
     {
         GameTime = GameManager.Instance.Play_minute;
         Timer = GetComponent<Slider>();
-        MaxTime = GameTime * 60;
+        MaxTime = GameTime * 60f;
         GameManager.Instance.play_time = MaxTime;
     }
 
@@ -28,7 +28,7 @@ public class GameTimer : MonoBehaviour
         
         if(Timer.value <= 0)
         {
-            if(GameManager.Instance.GetMoney() <= GameManager.Instance.TargetAmount)
+            if(GameManager.Instance.GetMoney() >= GameManager.Instance.TargetAmount)
             {
                 GameManager.Instance.GameClear();
                 SceneManager.LoadScene("End");

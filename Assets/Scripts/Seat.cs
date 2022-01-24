@@ -7,15 +7,11 @@ public class Seat : MonoBehaviour
 {
     [SerializeField] private int SeatNumber;
     public GameObject CustomerPrefab;
-    [SerializeField] private Slider Timer;
-    private AudioSource theAudio;
-    //[SerializeField] protected AudioClip SitClip;
+    [SerializeField] private Slider Timer; 
 
     void Start()
     {
         StartCoroutine(SetCustomer());
-        theAudio = GetComponent<AudioSource>();
-        //theAudio.clip = SitClip;
     }
 
     private void Update()
@@ -28,7 +24,7 @@ public class Seat : MonoBehaviour
     {
         if (GameManager.Instance.GetGameStatus() == 1) {
 
-            yield return new WaitForSeconds(Random.Range(0.0f, 20.0f));
+            yield return new WaitForSeconds(Random.Range(0.0f, GameManager.Instance.Customer_term));
 
             if (!GameManager.Instance.CustomerFull && GameManager.Instance.Seat[SeatNumber] == -1)
             {
@@ -37,7 +33,6 @@ public class Seat : MonoBehaviour
                 Timer.gameObject.SetActive(true);
                 copy.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.People[GameManager.Instance.Seat[SeatNumber]];
                 copy.GetComponent<Customer>().setInit(GameManager.Instance.Seat[SeatNumber], Timer, SeatNumber);
-                theAudio.Play();
             }
         }
         yield return StartCoroutine(SetCustomer());

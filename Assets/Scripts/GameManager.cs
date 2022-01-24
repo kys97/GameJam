@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public List<Sprite> People;
     public int[] Assassin = new int[5];
     public List<Sprite> Bottles;
+    public List<Sprite> Ending;
 
     public bool CustomerFull = false;//¼Õ´Ô ´Ù Ã¡´ÂÁö
     public List<int> Seat;//ÁÂ¼®
@@ -19,10 +20,18 @@ public class GameManager : MonoBehaviour
     public int[] menuNumber = { 1, 2, 4, 5, 7, 8 };
     public int[] poisonNumber = { 10, 11, 13, 14, 16, 17 };
 
-    public int Play_minute;
+    public float Play_minute;
     public float play_time;
     public int Customer_Second;
     public float customer_time;
+    public float Customer_term;
+
+    [Header("- Sound")]
+    private AudioSource theAudio;
+    public AudioClip StartClip;
+    public AudioClip TtClip;
+    public AudioClip ClearClip;
+    public AudioClip OverClip;
 
     private void Awake()
     {
@@ -31,6 +40,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        theAudio = GetComponent<AudioSource>();
+
         _instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -45,7 +57,7 @@ public class GameManager : MonoBehaviour
                 _instance = FindObjectOfType(typeof(GameManager)) as GameManager;
 
                 if (_instance == null)
-                    Debug.Log("½Ì±ÛÅæ ¾È‰Î");
+                    Debug.Log("½Ì±ÛÅæ ¾ÈµÊ");
             }
 
             return _instance;
@@ -73,8 +85,19 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < Assassin.Length; i++)
             RandomKiller(i);
 
-            SceneManager.LoadScene("Game");
+        theAudio.clip = StartClip;
+        theAudio.Play();
+
+        SceneManager.LoadScene("Game"); 
     }
+
+    public void PrintTutorialClip()
+    {
+        theAudio.clip = TtClip;
+        theAudio.Play();
+
+    }
+
     public void RandomKiller(int i)
     {
         bool check = true;
@@ -95,11 +118,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GameClear() { GameStatus = 2; GameEnding();  }
-    public void GameTimeOver() { GameStatus = 3; GameEnding(); }
-    public void GameDie() { GameStatus = 4; GameEnding(); }
+    public void GameClear()
+    { 
+        GameStatus = 2;
+        theAudio.clip = ClearClip;
+        theAudio.Play();
+        GameEnding(); 
+    }
+    public void GameTimeOver()
+    { 
+        GameStatus = 3;
+        theAudio.clip = OverClip;
+        theAudio.Play();
+        GameEnding(); 
+    }
+    public void GameDie() 
+    { 
+        GameStatus = 4;
+        theAudio.clip = OverClip;
+        theAudio.Play();
+        GameEnding();
+    }
     public int GetGameStatus() { return GameStatus; }
-    public void GameEnding() { SceneManager.LoadScene("End"); }
+    public void GameEnding() 
+    { SceneManager.LoadScene("End"); }
 
     public void SetMoney(int m) { Money += m; }
     public int GetMoney() { return Money; }

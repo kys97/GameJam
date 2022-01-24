@@ -74,7 +74,7 @@ public class Cooking : MonoBehaviour
                     if (target.name == "C1")
                     {
                         state += 1;
-                        gamemanager.SetMoney(- Cost[3]);
+                        //gamemanager.SetMoney(- Cost[3]);
 
                         theAudio.clip = milk;
                         theAudio.Play();
@@ -82,7 +82,7 @@ public class Cooking : MonoBehaviour
                     else if (target.name == "C2")
                     {
                         state += 2;
-                        gamemanager.SetMoney(- Cost[4]);
+                        //gamemanager.SetMoney(- Cost[4]);
 
                         theAudio.clip = whiskey;
                         theAudio.Play();
@@ -93,7 +93,7 @@ public class Cooking : MonoBehaviour
                 {
                     isPoison = true;
                     state += 9;
-                    gamemanager.SetMoney(- Cost[5]);
+                    //gamemanager.SetMoney(- Cost[5]);
 
                     theAudio.clip = poison;
                     theAudio.Play();
@@ -138,7 +138,7 @@ public class Cooking : MonoBehaviour
     {
         isPoison = false;
         renderer.enabled = true;
-        gamemanager.SetMoney(- Cost[bottle / 3]);
+        //gamemanager.SetMoney(- Cost[bottle / 3]);
     }
 
     private void Serving()
